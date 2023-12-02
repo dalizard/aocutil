@@ -3,7 +3,7 @@ package aocutil_test
 import (
 	"testing"
 
-	"github.com/echojc/aocutil"
+	"github.com/dalizard/aocutil"
 )
 
 func TestInput(t *testing.T) {
