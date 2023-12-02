@@ -31,6 +31,13 @@ func NewInputFromFile(f string) (*Input, error) {
 	return &Input{sessionID: &sid}, nil
 }
 
+// NewInputFromEnv makes an Input instance using the session data stored in an
+// environment variable.
+func NewInputFromEnv(v string) (*Input, error) {
+	sid := os.Getenv(v)
+	return &Input{sessionID: &sid}, nil
+}
+
 // Reader returns an io.ReadCloser of the input. This must be closed when done.
 func (i *Input) Reader(year, day int) (io.ReadCloser, error) {
 	fn := fmt.Sprintf("%d_%d.txt", year, day)
