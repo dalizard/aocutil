@@ -9,7 +9,7 @@ import (
 func TestInput(t *testing.T) {
 	i, err := aocutil.NewInputFromFile("session_id")
 	if err != nil {
-		t.Errorf("Could not read session ID from file: %w", err)
+		t.Errorf("Could not read session ID from file: %v", err)
 		t.FailNow()
 	}
 
