@@ -1,3 +1,3 @@
-module github.com/echojc/aocutil
+module github.com/dalizard/aocutil
 
 go 1.17
